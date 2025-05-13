@@ -38,7 +38,7 @@ class Pipeline(BaseTask):
             if isinstance(t, Pipeline):
                 t.init()
         if self.chained:
-            self.create_chain(self.tasks)
+            self._create_chain(self.tasks)
         self._inited = True
 
     def run(self, arg=None) -> Any:
@@ -122,7 +122,7 @@ class Pipeline(BaseTask):
         else:
             self.tasks.append(task)
 
-    def create_chain(self, tasks: list[BaseTask]) -> None:
+    def _create_chain(self, tasks: list[BaseTask]) -> None:
         for i, task in enumerate(tasks):
             if task.receiver_id is None:
                 task.receiver_id = i + 1

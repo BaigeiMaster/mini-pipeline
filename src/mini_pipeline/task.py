@@ -17,11 +17,11 @@ class BaseTask(ABC):
         )
 
     @abstractmethod
-    def run(self, arg) -> dict[int, Any]:
+    def run(self, arg):
         pass
 
     @property
-    def receiver_id(self):
+    def receiver_id(self) -> int:
         return self._receiver_id
 
     @receiver_id.setter
