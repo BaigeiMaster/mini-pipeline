@@ -32,8 +32,6 @@ class Pipeline(BaseTask):
         ), f"{self}: tasks must be a list of BaseTask instances"
         for i, t in enumerate(self.tasks):
             t.id_ = i
-        for i, t in enumerate(reversed(self.tasks)):
-            t.id_inverse = -(i + 1)
         for t in self.tasks:
             if isinstance(t, Pipeline):
                 t.init()
