@@ -235,7 +235,6 @@ Abstract base class for all tasks.
 
 **Properties:**
 - `id_`: The task's ID in the pipeline.
-- `id_inverse`: The task's ID from the end of the pipeline.
 - `receiver_id`: The ID of the task(s) that should receive this task's output.
 
 #### Pipeline
@@ -488,7 +487,6 @@ print(result)
 
 **属性:**
 - `id_`: 任务在管道中的 ID。
-- `id_inverse`: 任务从管道末尾开始的 ID。
 - `receiver_id`: 应接收此任务输出的任务 ID。
 
 #### Pipeline
