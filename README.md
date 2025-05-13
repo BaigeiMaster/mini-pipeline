@@ -32,7 +32,7 @@ Mini Pipeline is a lightweight framework that allows you to create and chain tas
 pip install .
 
 # Or directly from GitHub
-pip install git+https://github.com/username/mini-pipeline.git
+pip install git+https://github.com/BaigeiMaster/mini-pipeline.git
 ```
 
 ### Requirements
@@ -283,7 +283,7 @@ Mini Pipeline 是一个轻量级框架，允许您在管道中创建和链接任
 pip install .
 
 # 或直接从 GitHub 安装
-pip install git+https://github.com/username/mini-pipeline.git
+pip install git+https://github.com/BaigeiMaster/mini-pipeline.git
 ```
 
 ### 要求

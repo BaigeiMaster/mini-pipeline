@@ -9,7 +9,6 @@ class BaseTask(ABC):
             receiver_id, Union[int, None, tuple, list]
         ), f"{self}: receiver_id 必须为 int, tuple[int], list[int] 类型"
         self._id = None
-        self._id_inverse = None
         self._receiver_id = receiver_id
 
     def __repr__(self):
@@ -36,11 +35,3 @@ class BaseTask(ABC):
     @id_.setter
     def id_(self, id_: int):
         self._id = id_
-
-    @property
-    def id_inverse(self) -> int:
-        return self._id_inverse
-
-    @id_inverse.setter
-    def id_inverse(self, id_inverse: int):
-        self._id_inverse = id_inverse
