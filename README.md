@@ -246,7 +246,6 @@ A pipeline that contains and executes tasks.
 - `add(task)`: Add a task to the pipeline.
 - `init()`: Initialize the pipeline and its tasks.
 - `run(arg=None)`: Run the pipeline with an optional input argument.
-- `create_chain(tasks)`: Create a chain of tasks.
 
 **Properties:**
 - `tasks`: The list of tasks in the pipeline.
@@ -498,7 +497,6 @@ print(result)
 - `add(task)`: 向管道添加任务。
 - `init()`: 初始化管道及其任务。
 - `run(arg=None)`: 使用可选输入参数运行管道。
-- `create_chain(tasks)`: 创建任务链。
 
 **属性:**
 - `tasks`: 管道中的任务列表。
