@@ -1,14 +1,14 @@
 from abc import ABC, abstractmethod
-from typing import Any, Union
+from typing import Any, Union, Optional, List, Tuple
 
 
 class BaseTask(ABC):
 
-    def __init__(self, receiver_id: Union[int, None] = None):
+    def __init__(self, receiver_id: Optional[Union[int, List, Tuple]] = None):
         assert isinstance(
-            receiver_id, Union[int, None, tuple, list]
+            receiver_id, Union[int, None, Tuple, List]
         ), f"{self}: receiver_id 必须为 int, tuple[int], list[int] 类型"
-        self._id = None
+        self._id = 0
         self._receiver_id = receiver_id
 
     def __repr__(self):
@@ -17,15 +17,15 @@ class BaseTask(ABC):
         )
 
     @abstractmethod
-    def run(self, arg):
+    def run(self, arg=None):
         pass
 
     @property
-    def receiver_id(self) -> int:
+    def receiver_id(self) -> Union[int, List, Tuple, None]:
         return self._receiver_id
 
     @receiver_id.setter
-    def receiver_id(self, receiver_id: int):
+    def receiver_id(self, receiver_id: Optional[Union[int, List[int], Tuple[int]]]):
         self._receiver_id = receiver_id
 
     @property
